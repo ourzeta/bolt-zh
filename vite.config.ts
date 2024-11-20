@@ -11,8 +11,12 @@ export default defineConfig((config) => {
       target: 'esnext',
     },
     server: {
-      // port: 8006,
+      port: 8006,
       host: true,
+      headers: {
+        'Cross-Origin-Opener-Policy': 'same-origin',
+        'Cross-Origin-Embedder-Policy': 'require-corp',
+      },
     },
     plugins: [
       nodePolyfills({

@@ -74,7 +74,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
             {!chatStarted && (
               <div id="intro" className="mt-[26vh] max-w-chat mx-auto">
                 <h1 className="text-5xl text-center font-bold text-bolt-elements-textPrimary mb-2">
-                  创意的起点
+                  ai前端编辑器
                 </h1>
                 <p className="mb-4 text-center text-bolt-elements-textSecondary">
                   瞬间将想法变为现实，或获取现有项目的帮助。
