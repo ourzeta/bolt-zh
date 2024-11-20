@@ -27,11 +27,11 @@ const viewTransition = { ease: cubicEasingFn };
 const sliderOptions: SliderOptions<WorkbenchViewType> = {
   left: {
     value: 'code',
-    text: 'Code',
+    text: '代码',
   },
   right: {
     value: 'preview',
-    text: 'Preview',
+    text: '预览',
   },
 };
 
@@ -53,7 +53,7 @@ const workbenchVariants = {
 } satisfies Variants;
 
 export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => {
-  renderLogger.trace('Workbench');
+  renderLogger.trace('工作台');
 
   const hasPreview = useStore(computed(workbenchStore.previews, (previews) => previews.length > 0));
   const showWorkbench = useStore(workbenchStore.showWorkbench);
@@ -91,7 +91,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
 
   const onFileSave = useCallback(() => {
     workbenchStore.saveCurrentDocument().catch(() => {
-      toast.error('Failed to update file content');
+      toast.error('更新文件内容失败');
     });
   }, []);
 
@@ -129,7 +129,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
                     }}
                   >
                     <div className="i-ph:terminal" />
-                    Toggle Terminal
+                    切换终端
                   </PanelHeaderButton>
                 )}
                 <IconButton

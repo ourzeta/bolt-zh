@@ -1,110 +1,103 @@
-[![Bolt Open Source Codebase](./public/social_preview_index.jpg)](https://bolt.new)
+[![Bolt 开源代码库](./public/social_preview_index.jpg)](https://bolt.new)
 
-> Welcome to the **Bolt** open-source codebase! This repo contains a simple example app using the core components from bolt.new to help you get started building **AI-powered software development tools** powered by StackBlitz’s **WebContainer API**.
+> 欢迎来到 **Bolt** 开源代码库！本仓库包含了一个使用 bolt.new 核心组件的简单示例应用，帮助您开始构建由 StackBlitz 的 **WebContainer API** 驱动的 **AI 驱动软件开发工具**。
 
-### Why Build with Bolt + WebContainer API
+### 为什么使用 Bolt + WebContainer API 构建
 
-By building with the Bolt + WebContainer API you can create browser-based applications that let users **prompt, run, edit, and deploy** full-stack web apps directly in the browser, without the need for virtual machines. With WebContainer API, you can build apps that give AI direct access and full control over a **Node.js server**, **filesystem**, **package manager** and **dev terminal** inside your users browser tab. This powerful combination allows you to create a new class of development tools that support all major JavaScript libraries and Node packages right out of the box, all without remote environments or local installs.
+通过使用 Bolt + WebContainer API 构建，您可以创建基于浏览器的应用程序，让用户直接在浏览器中**提示、运行、编辑和部署**全栈 Web 应用，无需虚拟机。借助 WebContainer API，您可以构建能让 AI 直接访问和完全控制用户浏览器标签页中的 **Node.js 服务器**、**文件系统**、**包管理器**和**开发终端**的应用程序。这种强大的组合使您能够创建一类新的开发工具，开箱即可支持所有主要的 JavaScript 库和 Node 包，无需远程环境或本地安装。
 
-### What’s the Difference Between Bolt (This Repo) and [Bolt.new](https://bolt.new)?
+### Bolt（本仓库）和 [Bolt.new](https://bolt.new) 有什么区别？
 
-- **Bolt.new**: This is the **commercial product** from StackBlitz—a hosted, browser-based AI development tool that enables users to prompt, run, edit, and deploy full-stack web applications directly in the browser. Built on top of the [Bolt open-source repo](https://github.com/stackblitz/bolt.new) and powered by the StackBlitz **WebContainer API**.
+- **Bolt.new**：这是 StackBlitz 的**商业产品**——一个托管的、基于浏览器的 AI 开发工具，使用户能够直接在浏览器中提示、运行、编辑和部署全栈 Web 应用程序。基于 [Bolt 开源仓库](https://github.com/stackblitz/bolt.new) 构建，由 StackBlitz 的 **WebContainer API** 提供支持。
 
-- **Bolt (This Repo)**: This open-source repository provides the core components used to make **Bolt.new**. This repo contains the UI interface for Bolt as well as the server components, built using [Remix Run](https://remix.run/). By leveraging this repo and StackBlitz’s **WebContainer API**, you can create your own AI-powered development tools and full-stack applications that run entirely in the browser.
+- **Bolt（本仓库）**：这个开源仓库提供了用于构建 **Bolt.new** 的核心组件。本仓库包含 Bolt 的 UI 界面以及使用 [Remix Run](https://remix.run/) 构建的服务器组件。通过利用本仓库和 StackBlitz 的 **WebContainer API**，您可以创建自己的 AI 驱动开发工具和完全在浏览器中运行的全栈应用程序。
 
-# Get Started Building with Bolt
+# 开始使用 Bolt 构建
 
-Bolt combines the capabilities of AI with sandboxed development environments to create a collaborative experience where code can be developed by the assistant and the programmer together. Bolt combines [WebContainer API](https://webcontainers.io/api) with [Claude Sonnet 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) using [Remix](https://remix.run/) and the [AI SDK](https://sdk.vercel.ai/).
+Bolt 将 AI 的能力与沙盒开发环境相结合，创造了一个助手和程序员可以共同开发代码的协作体验。Bolt 使用 [Remix](https://remix.run/) 和 [AI SDK](https://sdk.vercel.ai/) 将 [WebContainer API](https://webcontainers.io/api) 与 [Claude Sonnet 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) 结合在一起。
 
 ### WebContainer API
 
-Bolt uses [WebContainers](https://webcontainers.io/) to run generated code in the browser. WebContainers provide Bolt with a full-stack sandbox environment using [WebContainer API](https://webcontainers.io/api). WebContainers run full-stack applications directly in the browser without the cost and security concerns of cloud hosted AI agents. WebContainers are interactive and editable, and enables Bolt's AI to run code and understand any changes from the user.
+Bolt 使用 [WebContainers](https://webcontainers.io/) 在浏览器中运行生成的代码。WebContainers 使用 [WebContainer API](https://webcontainers.io/api) 为 Bolt 提供全栈沙盒环境。WebContainers 直接在浏览器中运行全栈应用程序，避免了云托管 AI 代理的成本和安全问题。WebContainers 是交互式和可编辑的，使 Bolt 的 AI 能够运行代码并理解用户的任何更改。
 
-The [WebContainer API](https://webcontainers.io) is free for personal and open source usage. If you're building an application for commercial usage, you can learn more about our [WebContainer API commercial usage pricing here](https://stackblitz.com/pricing#webcontainer-api).
+[WebContainer API](https://webcontainers.io) 对个人和开源使用是免费的。如果您正在构建商业用途的应用程序，可以在[这里了解更多关于我们的 WebContainer API 商业使用定价](https://stackblitz.com/pricing#webcontainer-api)。
 
-### Remix App
+### Remix 应用
 
-Bolt is built with [Remix](https://remix.run/) and
-deployed using [CloudFlare Pages](https://pages.cloudflare.com/) and
-[CloudFlare Workers](https://workers.cloudflare.com/).
+Bolt 使用 [Remix](https://remix.run/) 构建，并使用 [CloudFlare Pages](https://pages.cloudflare.com/) 和 [CloudFlare Workers](https://workers.cloudflare.com/) 部署。
 
-### AI SDK Integration
+### AI SDK 集成
 
-Bolt uses the [AI SDK](https://github.com/vercel/ai) to integrate with AI
-models. At this time, Bolt supports using Anthropic's Claude Sonnet 3.5.
-You can get an API key from the [Anthropic API Console](https://console.anthropic.com/) to use with Bolt.
-Take a look at how [Bolt uses the AI SDK](https://github.com/stackblitz/bolt.new/tree/main/app/lib/.server/llm)
+Bolt 使用 [AI SDK](https://github.com/vercel/ai) 与 AI 模型集成。目前，Bolt 支持使用 Anthropic 的 Claude Sonnet 3.5。您可以从 [Anthropic API 控制台](https://console.anthropic.com/) 获取 API 密钥以用于 Bolt。看看 [Bolt 如何使用 AI SDK](https://github.com/stackblitz/bolt.new/tree/main/app/lib/.server/llm)。
 
-## Prerequisites
+## 前提条件
 
-Before you begin, ensure you have the following installed:
+在开始之前,请确保您已安装以下内容:
 
 - Node.js (v20.15.1)
 - pnpm (v9.4.0)
-
-## Setup
-
-1. Clone the repository (if you haven't already):
+设置
+克隆仓库(如果您还没有):
 
 ```bash
 git clone https://github.com/stackblitz/bolt.new.git
 ```
 
-2. Install dependencies:
+安装依赖:
 
 ```bash
 pnpm install
 ```
 
-3. Create a `.env.local` file in the root directory and add your Anthropic API key:
+在根目录创建一个 .env.local 文件,并添加您的 Anthropic API 密钥:
 
-```
+```bash
 ANTHROPIC_API_KEY=XXX
 ```
 
-Optionally, you can set the debug level:
+可选地,您可以设置调试级别:
 
-```
+```bash
 VITE_LOG_LEVEL=debug
 ```
 
-**Important**: Never commit your `.env.local` file to version control. It's already included in .gitignore.
+重要: 永远不要将您的 .env.local 文件提交到版本控制。它已经包含在 .gitignore 中。
 
-## Available Scripts
+## 可用脚本
 
-- `pnpm run dev`: Starts the development server.
-- `pnpm run build`: Builds the project.
-- `pnpm run start`: Runs the built application locally using Wrangler Pages. This script uses `bindings.sh` to set up necessary bindings so you don't have to duplicate environment variables.
-- `pnpm run preview`: Builds the project and then starts it locally, useful for testing the production build. Note, HTTP streaming currently doesn't work as expected with `wrangler pages dev`.
-- `pnpm test`: Runs the test suite using Vitest.
-- `pnpm run typecheck`: Runs TypeScript type checking.
-- `pnpm run typegen`: Generates TypeScript types using Wrangler.
-- `pnpm run deploy`: Builds the project and deploys it to Cloudflare Pages.
+```bash
+pnpm run dev: 启动开发服务器。
+pnpm run build: 构建项目。
+pnpm run start: 使用 Wrangler Pages 在本地运行构建的应用程序。此脚本使用 bindings.sh 设置必要的绑定,因此您不必重复环境变量。
+pnpm run preview: 构建项目然后在本地启动,用于测试生产构建。注意,HTTP 流目前无法按预期与 wrangler pages dev 一起工作。
+pnpm test: 使用 Vitest 运行测试套件。
+pnpm run typecheck: 运行 TypeScript 类型检查。
+pnpm run typegen: 使用 Wrangler 生成 TypeScript 类型。
+pnpm run deploy: 构建项目并将其部署到 Cloudflare Pages。
 
-## Development
+## 开发 
 
-To start the development server:
+要启动开发服务器:
 
 ```bash
 pnpm run dev
+这将启动 Remix Vite 开发服务器。
 ```
 
-This will start the Remix Vite development server.
+## 测试
 
-## Testing
-
-Run the test suite with:
+运行测试套件:
 
 ```bash
 pnpm test
 ```
 
-## Deployment
+## 部署
 
-To deploy the application to Cloudflare Pages:
+要将应用程序部署到 Cloudflare Pages:
 
 ```bash
 pnpm run deploy
 ```
 
-Make sure you have the necessary permissions and Wrangler is correctly configured for your Cloudflare account.
+确保您拥有必要的权限,并且 Wrangler 已为您的 Cloudflare 账户正确配置。
