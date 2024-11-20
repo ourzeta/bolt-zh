@@ -130,7 +130,7 @@ export const EditorPanel = memo(
               <div className="flex flex-col border-r border-bolt-elements-borderColor h-full">
                 <PanelHeader>
                   <div className="i-ph:tree-structure-duotone shrink-0" />
-                  Files
+                  文件
                 </PanelHeader>
                 <FileTree
                   className="h-full"
@@ -216,7 +216,7 @@ export const EditorPanel = memo(
                       onClick={() => setActiveTerminal(index)}
                     >
                       <div className="i-ph:terminal-window-duotone text-lg" />
-                      Terminal {terminalCount > 1 && index + 1}
+                      终端 {terminalCount > 1 && index + 1}
                     </button>
                   );
                 })}
@@ -224,7 +224,7 @@ export const EditorPanel = memo(
                 <IconButton
                   className="ml-auto"
                   icon="i-ph:caret-down"
-                  title="Close"
+                  title="关闭"
                   size="md"
                   onClick={() => workbenchStore.toggleTerminal(false)}
                 />
