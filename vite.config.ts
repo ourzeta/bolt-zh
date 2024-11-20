@@ -10,6 +10,10 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    server: {
+      // port: 8006,
+      host: true,
+    },
     plugins: [
       nodePolyfills({
         include: ['path', 'buffer'],
@@ -32,7 +36,7 @@ export default defineConfig((config) => {
 
 function chrome129IssuePlugin() {
   return {
-    name: 'chrome129IssuePlugin',
+    name: 'chrome129问题插件',
     configureServer(server: ViteDevServer) {
       server.middlewares.use((req, res, next) => {
         const raw = req.headers['user-agent']?.match(/Chrom(e|ium)\/([0-9]+)\./);
@@ -43,7 +47,7 @@ function chrome129IssuePlugin() {
           if (version === 129) {
             res.setHeader('content-type', 'text/html');
             res.end(
-              '<body><h1>Please use Chrome Canary for testing.</h1><p>Chrome 129 has an issue with JavaScript modules & Vite local development, see <a href="https://github.com/stackblitz/bolt.new/issues/86#issuecomment-2395519258">for more information.</a></p><p><b>Note:</b> This only impacts <u>local development</u>. `pnpm run build` and `pnpm run start` will work fine in this browser.</p></body>',
+              '<body><h1>请使用Chrome Canary进行测试。</h1><p>Chrome 129在JavaScript模块和Vite本地开发方面存在问题，详见<a href="https://github.com/stackblitz/bolt.new/issues/86#issuecomment-2395519258">更多信息。</a></p><p><b>注意：</b>这只影响<u>本地开发</u>。在此浏览器中使用`pnpm run build`和`pnpm run start`将正常工作。</p></body>',
             );
 
             return;
